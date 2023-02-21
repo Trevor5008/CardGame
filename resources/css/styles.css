@@ -1,0 +1,86 @@
+* {
+   font-family: Helvetica;
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   --primary-light: #ff8a8a;
+   --primary: #f35959;
+   --primary-dark: #970c0c;
+
+   --white: #FFFFFF;
+   --greyLight-1: #E4EBF5;
+   --greyLight-2: #c8d0e7;
+   --greyLight-3: #bec8e4;
+   --greyDark: #b5bfd8;
+   --shadow: .3rem .3rem .6rem var(--greyLight-2), -.2rem -.2rem .5rem var(--white);
+}
+
+body {
+   background: url('../assets/images/blackjack-classic-background.jpg') no-repeat center center/cover;
+}
+
+img {
+   height: 10vw;
+}
+
+.cards__discard {
+   margin: 4rem 10rem;
+}
+
+.hidden {
+   visibility: hidden;
+}
+
+.cards {
+   width: 25vw;
+   margin: 10vh auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.slide-under {
+   position: relative;
+   left: 3.5rem;
+}
+
+.slide-over {
+   position: relative;
+   right: 3.5rem;
+}
+
+.cards__deal {
+   margin-top: 2rem;
+   text-transform: uppercase;
+}
+
+.btn {
+   width: 8rem;
+   height: 2.5rem;
+   border-radius: 1rem;
+   box-shadow: var(--shadow);
+   cursor: pointer;
+   transition: .3s ease;
+   border: none;
+}
+
+.btn__primary {
+   background: var(--primary);
+   box-shadow: inset .2rem .2rem 1rem var(--primary-light),
+      inset -.2rem -.2rem 1rem var(--primary-dark),
+      var(--shadow);
+   color: var(--greyDark);
+}
+
+.btn:hover {
+   color: var(--greyDark);
+}
+
+.btn:active {
+   color: darkslategrey;
+   box-shadow: inset .2rem .2rem 1rem var(--primary-dark),
+      inset -.2rem -.2rem 1rem var(--primary-light);
+}
